@@ -1,0 +1,29 @@
+server:
+  error:
+    include-stacktrace: never
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/school
+    username: user
+    password: qwe123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  devtools:
+    restart:
+      log-condition-evaluation-delta: false
+  server:
+    port: 8080
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
